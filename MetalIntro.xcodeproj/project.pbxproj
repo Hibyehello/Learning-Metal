@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1E544C12A0C808900C70A60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E544C02A0C808900C70A60 /* main.m */; };
+		E144BC5A2A0F0A9E00E17356 /* ShaderDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = E144BC592A0F0A9E00E17356 /* ShaderDefinitions.m */; };
+		E1E544C12A0C808900C70A60 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1E544C02A0C808900C70A60 /* main.mm */; };
+		E1E544C82A0D228500C70A60 /* Window.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E544C72A0D228500C70A60 /* Window.m */; };
+		E1E544CB2A0D27ED00C70A60 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E544CA2A0D27ED00C70A60 /* Renderer.m */; };
+		E1E544CF2A0DE43F00C70A60 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E1E544CE2A0DE43F00C70A60 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E144BC592A0F0A9E00E17356 /* ShaderDefinitions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShaderDefinitions.m; sourceTree = "<group>"; };
 		E1E544BD2A0C808900C70A60 /* MetalIntro */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MetalIntro; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1E544C02A0C808900C70A60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E1E544C02A0C808900C70A60 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		E1E544C72A0D228500C70A60 /* Window.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Window.m; sourceTree = "<group>"; };
+		E1E544C92A0D22D400C70A60 /* Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		E1E544CA2A0D27ED00C70A60 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+		E1E544CC2A0D280000C70A60 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		E1E544CD2A0DE0BF00C70A60 /* ShaderDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderDefinitions.h; sourceTree = "<group>"; };
+		E1E544CE2A0DE43F00C70A60 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +68,14 @@
 		E1E544BF2A0C808900C70A60 /* MetalIntro */ = {
 			isa = PBXGroup;
 			children = (
-				E1E544C02A0C808900C70A60 /* main.m */,
+				E1E544C02A0C808900C70A60 /* main.mm */,
+				E1E544C72A0D228500C70A60 /* Window.m */,
+				E1E544CA2A0D27ED00C70A60 /* Renderer.m */,
+				E1E544CC2A0D280000C70A60 /* Renderer.h */,
+				E1E544C92A0D22D400C70A60 /* Window.h */,
+				E1E544CD2A0DE0BF00C70A60 /* ShaderDefinitions.h */,
+				E144BC592A0F0A9E00E17356 /* ShaderDefinitions.m */,
+				E1E544CE2A0DE43F00C70A60 /* Shaders.metal */,
 			);
 			path = MetalIntro;
 			sourceTree = "<group>";
@@ -119,7 +137,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E544C12A0C808900C70A60 /* main.m in Sources */,
+				E1E544CF2A0DE43F00C70A60 /* Shaders.metal in Sources */,
+				E1E544C12A0C808900C70A60 /* main.mm in Sources */,
+				E1E544C82A0D228500C70A60 /* Window.m in Sources */,
+				E1E544CB2A0D27ED00C70A60 /* Renderer.m in Sources */,
+				E144BC5A2A0F0A9E00E17356 /* ShaderDefinitions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +260,7 @@
 		E1E544C52A0C808900C70A60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BKKR9KB2P8;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -248,6 +271,7 @@
 		E1E544C62A0C808900C70A60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BKKR9KB2P8;
 				ENABLE_HARDENED_RUNTIME = YES;
